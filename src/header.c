@@ -18,7 +18,7 @@ void iniciaTexto (TipoTexto t, char *nomeArq) {
     }
 }
 
-void BoyerMoore (TipoTexto t, long tamT, TipoPadrao p, long tamP)
+int BoyerMoore (TipoTexto t, long tamT, TipoPadrao p, long tamP)
 {
     long i, j, k, d[MAXCHAR + 1];
     int cont = 0;
@@ -50,10 +50,10 @@ void BoyerMoore (TipoTexto t, long tamT, TipoPadrao p, long tamP)
         i += d[t[i-1]];
     }
 
-    printf("%d times of comparision.\n", cont);
+    return cont;
 }
 
-void ForcaBruta (char* T, int n, char* P, int m)
+int ForcaBruta (char* T, int n, char* P, int m)
 {
 	int i,j,k;
 	int count = 0;
@@ -72,5 +72,5 @@ void ForcaBruta (char* T, int n, char* P, int m)
 		else
 			count++;
 	}
-	printf("%d times of comparision.\n", count);
+	return count;
 }
